@@ -1,6 +1,6 @@
-import { ChallengeV1DTO } from "./challenges.dto";
-import { Levels } from "../../constants";
-import { Level } from "./enum/enum.challenges";
+import { ChallengeV1DTO } from './challenges.dto';
+import { Levels } from '../../constants';
+import { Level } from './enum/enum.challenges';
 export declare class Points {
     /**
      * Level of the category points.
