@@ -1,7 +1,7 @@
 import { Regions, Levels } from '../../../constants'
 import { endpointsChallengesV1 } from '../../../endpoints'
 import { ChallengeV1DTO } from '../../../models-dto/challenges'
-import { ProfileV1DTO } from '../../../models-dto/challenges/playerData.dto'
+import { ChallengeConfigV1DTO, ChallengeLeaderboardEntryV1DTO, PercentilesV1DTO, ProfileV1DTO } from '../../../models-dto/challenges/playerData.dto'
 import { BaseApiLol } from '../base/base.api.lol'
 
 /**
@@ -13,14 +13,14 @@ export class ChallengesApi extends BaseApiLol {
      * Get config
      */
     public async getConfig(region: Regions) {
-        return this.request<undefined>(region, endpointsChallengesV1.GetConfig)
+        return this.request<ChallengeConfigV1DTO[]>(region, endpointsChallengesV1.GetConfig)
     }
 
     /**
      * Get percentiles
      */
     public async getPercentiles(region: Regions) {
-        return this.request(region, endpointsChallengesV1.GetPercentiles)
+        return this.request<PercentilesV1DTO[]>(region, endpointsChallengesV1.GetPercentiles)
     }
 
     /**
@@ -31,7 +31,7 @@ export class ChallengesApi extends BaseApiLol {
         const params = {
             challengeId
         }
-        return this.request(region, endpointsChallengesV1.GetChallengeConfig, params)
+        return this.request<ChallengeConfigV1DTO>(region, endpointsChallengesV1.GetChallengeConfig, params)
     }
 
     /**
@@ -43,7 +43,7 @@ export class ChallengesApi extends BaseApiLol {
         const params = {
             challengeId, level
         }
-        return this.request(region, endpointsChallengesV1.GetLeaderboardsByLevel, params)
+        return this.request<ChallengeLeaderboardEntryV1DTO>(region, endpointsChallengesV1.GetLeaderboardsByLevel, params)
     }
 
     /**
@@ -54,7 +54,7 @@ export class ChallengesApi extends BaseApiLol {
         const params = {
             challengeId
         }
-        return this.request(region, endpointsChallengesV1.GetChallengePercentiles, params)
+        return this.request<PercentilesV1DTO>(region, endpointsChallengesV1.GetChallengePercentiles, params)
     }
 
     /**

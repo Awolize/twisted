@@ -1,5 +1,6 @@
 import { ChallengeV1DTO } from "./challenges.dto";
 import { Levels } from "../../constants";
+import { Level } from "./enum/enum.challenges";
 
 export class Points {
     /**
@@ -44,3 +45,38 @@ export class ProfileV1DTO {
      */
     public readonly preferences: Preferences;
 }
+
+
+export class PercentilesV1DTO {
+    /**
+     * Total points data.
+     */
+    public readonly percentiles: Record<Level, number>
+}
+
+
+type LocalizedNames = {
+    [key in 'ar_AE' | 'cs_CZ' | 'de_DE' | 'el_GR' | 'en_AU' | 'en_GB' | 'en_PH' | 'en_SG' | 'en_US' | 'es_AR' | 'es_ES' | 'es_MX' | 'fr_FR' | 'hu_HU' | 'it_IT' | 'ja_JP' | 'ko_KR' | 'pl_PL' | 'pt_BR' | 'ru_RU' | 'th_TH' | 'tr_TR' | 'vi_VN' | 'zh_CN' | 'zh_TW']: {
+        description: string;
+        name: string;
+        shortDescription: string;
+    }
+}
+
+export class ChallengeConfigV1DTO {
+    public readonly id: number;
+    public readonly percentiles: LocalizedNames
+    public readonly state: 'ENABLED' | 'DISABLED';
+    public readonly leaderboard: boolean;
+    public readonly thresholds: {
+        [key: string]: number;
+    };
+
+}
+
+export class ChallengeLeaderboardEntryV1DTO {
+    public readonly position: number;
+    public readonly puuid: string;
+    public readonly value: number;
+}
+
