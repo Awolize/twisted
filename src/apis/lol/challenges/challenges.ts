@@ -11,25 +11,25 @@ export class ChallengesApi extends BaseApiLol {
    * Get config
    */
   public async getConfig (region: Regions) {
-    return this.request(region, endpointsChallengesV1.getConfig)
+    return this.request<undefined>(region, endpointsChallengesV1.GetConfig)
   }
 
   /**
    * Get percentiles
    */
-  getPercentiles (region: Regions) {
-    return this.request(region, endpointsChallengesV1.getPercentiles)
+  public async getPercentiles (region: Regions) {
+    return this.request(region, endpointsChallengesV1.GetPercentiles)
   }
 
   /**
    * Get getChallengePercentile by challengeId
    * @param challengeId
    */
-  getChallengeConfig (region: Regions, challengeId: number) {
+  public async getChallengeConfig (challengeId: number, region: Regions) {
     const params = {
       challengeId
     }
-    return this.request(region, endpointsChallengesV1.getChallengeConfig, params)
+    return this.request(region, endpointsChallengesV1.GetChallengeConfig, params)
   }
 
   /**
@@ -37,32 +37,32 @@ export class ChallengesApi extends BaseApiLol {
    * @param challengeId
    * @param level rank tier
    */
-  getLeaderboardsByLevel (region: Regions, challengeId: number, level: Levels) {
+  public async getLeaderboardsByLevel (challengeId: number, level: Levels, region: Regions) {
     const params = {
       challengeId, level
     }
-    return this.request(region, endpointsChallengesV1.getLeaderboardsByLevel, params)
+    return this.request(region, endpointsChallengesV1.GetLeaderboardsByLevel, params)
   }
 
   /**
    * Get Challenge Percentiles
    * @param challengeId
    */
-  getChallengePercentiles (region: Regions, challengeId: number) {
+  public async getChallengePercentiles (challengeId: number, region: Regions) {
     const params = {
       challengeId
     }
-    return this.request(region, endpointsChallengesV1.getChallengePercentile, params)
+    return this.request(region, endpointsChallengesV1.GetChallengePercentiles, params)
   }
 
   /**
    * Get player data
    * @param puuid
    */
-  getPlayerData (region: Regions, puuid: string) {
+  public async getPlayerData (puuid: string, region: Regions) {
     const params = {
       puuid
     }
-    return this.request(region, endpointsChallengesV1.getPlayerData, params)
+    return this.request(region, endpointsChallengesV1.GetPlayerData, params)
   }
 }
