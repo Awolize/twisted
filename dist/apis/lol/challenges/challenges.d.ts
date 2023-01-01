@@ -1,4 +1,5 @@
 import { Regions, Levels } from '../../../constants';
+import { ProfileV1DTO } from '../../../models-dto/challenges/playerData.dto';
 import { BaseApiLol } from '../base/base.api.lol';
 /**
  * Challenges methods
@@ -32,5 +33,5 @@ export declare class ChallengesApi extends BaseApiLol {
      * Get player data
      * @param puuid
      */
-    getPlayerData(puuid: string, region: Regions): Promise<import("../../../models-dto").ApiResponseDTO<unknown>>;
+    getPlayerData(puuid: string, region: Regions): Promise<import("../../../models-dto").ApiResponseDTO<ProfileV1DTO>>;
 }
