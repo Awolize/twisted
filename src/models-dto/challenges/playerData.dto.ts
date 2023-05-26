@@ -63,9 +63,10 @@ type LocalizedNames = {
 
 export class ChallengeConfigV1DTO {
   public readonly id: number
-  public readonly percentiles: LocalizedNames
+  public readonly localizedNames: LocalizedNames
   public readonly state: 'ENABLED' | 'DISABLED'
   public readonly leaderboard: boolean
+  public readonly endTimestamp?: number; // only occurs on one challenge, the first one (id:600012)
   public readonly thresholds: {
     [key: string]: number;
   }
