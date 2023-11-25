@@ -12,11 +12,16 @@ import { BaseApiLol } from './base/base.api.lol'
 import { ClashApi } from './clash/clash.api.lol'
 import { MatchV5Api } from './match/match-v5'
 import { StatusV4Api } from './status/status-v4'
+import { AccountApi } from '../riot/account/account'
 
 /**
  * Classic league of legends api
  */
 export class LolApi extends BaseApiLol {
+  /**
+   * Account methods
+   */
+  public readonly Account = new AccountApi(this.getParam())
   /**
    * Match methods
    * @deprecated use v5 instead

@@ -240,3 +240,11 @@ export const endpointsChallengesV1: IEndpoints = {
     version: 1
   }
 }
+
+export const endpointsAccountV1: IEndpoints = {
+  GetAccount: {
+    path: 'accounts/$(by)/$(accountName)',
+    prefix: 'account',
+    version: 1
+  }
+}
