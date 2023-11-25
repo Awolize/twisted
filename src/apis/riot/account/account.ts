@@ -1,7 +1,7 @@
 import * as _ from 'lodash'
 import { endpointsAccountV1, IEndpoint } from '../../../endpoints/endpoints'
 import { AccountDTO } from '../../../models-dto/accounts/account.dto'
-import { Regions } from '../../../constants'
+import { Regions, regionToRegionGroup } from '../../../constants'
 import { FindAccountBy } from '../../../constants/account.find'
 import { BaseApiRiot } from '../../riot/base/base.api.riot'
 
@@ -32,7 +32,11 @@ export class AccountApi extends BaseApiRiot {
       by
     }
 
-    return this.request<AccountDTO>(region, endpoint, params)
+    return this.request<AccountDTO>(
+      regionToRegionGroup(region),
+      endpoint,
+      params
+    )
   }
   /**
    * Get by PUUID
@@ -48,6 +52,10 @@ export class AccountApi extends BaseApiRiot {
       by
     }
 
-    return this.request<AccountDTO>(region, endpoint, params)
+    return this.request<AccountDTO>(
+      regionToRegionGroup(region),
+      endpoint,
+      params
+    )
   }
 }
