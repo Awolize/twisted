@@ -12,3 +12,4 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./lol/lol"), exports);
 __exportStar(require("./tft/tft"), exports);
+__exportStar(require("./riot/riot"), exports);
