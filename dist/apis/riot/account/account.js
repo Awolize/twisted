@@ -31,6 +31,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountApi = void 0;
 const _ = __importStar(require("lodash"));
 const endpoints_1 = require("../../../endpoints/endpoints");
+const constants_1 = require("../../../constants");
 const account_find_1 = require("../../../constants/account.find");
 const base_api_riot_1 = require("../../riot/base/base.api.riot");
 /**
@@ -55,7 +56,7 @@ class AccountApi extends base_api_riot_1.BaseApiRiot {
                 accountName: gameName + '/' + tagLine,
                 by
             };
-            return this.request(region, endpoint, params);
+            return this.request(constants_1.regionToRegionGroup(region), endpoint, params);
         });
     }
     /**
@@ -72,7 +73,7 @@ class AccountApi extends base_api_riot_1.BaseApiRiot {
                 accountName: puuid,
                 by
             };
-            return this.request(region, endpoint, params);
+            return this.request(constants_1.regionToRegionGroup(region), endpoint, params);
         });
     }
 }
