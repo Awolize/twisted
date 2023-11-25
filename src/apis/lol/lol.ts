@@ -1,6 +1,7 @@
 import { MatchApi } from './match/match'
 import { LeagueApi } from './league/league'
 import { SummonerApi } from './summoner/summoner'
+import { ChallengesApi } from './challenges/challenges'
 import { ThirdPartyCode } from './thirdPartyCode/thirdPartyCode'
 import { ChampionApi } from './champion/champion'
 import { SpectatorApi } from './spectator/spectator'
@@ -11,11 +12,16 @@ import { BaseApiLol } from './base/base.api.lol'
 import { ClashApi } from './clash/clash.api.lol'
 import { MatchV5Api } from './match/match-v5'
 import { StatusV4Api } from './status/status-v4'
+import { AccountApi } from '../riot/account/account'
 
 /**
  * Classic league of legends api
  */
 export class LolApi extends BaseApiLol {
+  /**
+   * Account methods
+   */
+  public readonly Account = new AccountApi(this.getParam())
   /**
    * Match methods
    * @deprecated use v5 instead
@@ -33,6 +39,10 @@ export class LolApi extends BaseApiLol {
    * Summoner methods
    */
   public readonly Summoner = new SummonerApi(this.getParam())
+  /**
+   * Challenges methods
+   */
+  public readonly Challenges = new ChallengesApi(this.getParam())
   /**
    * Third Party methods
    */
