@@ -43,7 +43,7 @@ export class LeagueApi extends BaseApiLol {
    * @param region
    * @param page defaults to 1
    */
-  public async entries (queue: Queues, tier: Tiers, division: Divisions, region: Regions, page: number = 1) {
+  public async entries (queue: Queues, tier: Tiers, division: Divisions, region: Regions, page = 1) {
     const params = {
       queue,
       tier,

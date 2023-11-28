@@ -1,7 +1,6 @@
 import { invert } from 'lodash'
 import Axios from 'axios'
-// Untyped modules
-const { CamelCase } = require('camelcasejs')
+import _ from 'lodash'
 
 /**
  * Champions - Used as fallback
@@ -184,7 +183,7 @@ if (process.env.UPDATE_CHAMPION_IDS) {
     try {
       void Axios(CD_CHAMPIONS)
           .then(({ data: cdChamps }) => {
-            cdChamps.forEach(({ id, alias }: {id: number, alias: string}) => {
+            cdChamps.forEach(({ id, alias }: {id: number; alias: string}) => {
               const championAlias = alias.replace(/[a-z][A-Z]/g, letter => letter[0] + '_' + letter[1]).toUpperCase()
               if (!championIdMap[id]) {
                 championIdMap[id] = championIdMap[id] || championAlias
@@ -217,7 +216,7 @@ export function getChampionName (champ: number): string {
  */
 export function getChampionNameCapital (champ: number | string): string {
   let name = typeof champ === 'number' ? getChampionName(champ) : champ
-  name = CamelCase(name.toLowerCase())
+  name = _.camelCase(name.toLowerCase())
   name = name.charAt(0).toUpperCase() + name.slice(1)
   switch (name) {
     case 'Reksai':

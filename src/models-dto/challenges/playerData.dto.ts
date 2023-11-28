@@ -22,9 +22,9 @@ export class Points {
 }
 
 export interface Preferences {
-  bannerAccent: string
-  title: string
-  challengeIds: number[]
+  bannerAccent: string;
+  title: string;
+  challengeIds: number[];
 }
 
 export class ProfileV1DTO {

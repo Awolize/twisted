@@ -76,7 +76,7 @@ export class DataDragonService {
     return this.request(path, DataDragonEnum.STATIC)
   }
 
-  async getSeasons (): Promise<{ id: number, season: string}[]> {
+  async getSeasons (): Promise<{ id: number; season: string}[]> {
     const path = 'docs/lol/seasons.json'
     return this.request(path, DataDragonEnum.STATIC)
   }
