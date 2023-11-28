@@ -1,2 +1,2 @@
-export * from './ClashTournamentList.example'
-export * from './ClashTournamentById.example'
+export * from "./ClashTournamentList.example";
+export * from "./ClashTournamentById.example";

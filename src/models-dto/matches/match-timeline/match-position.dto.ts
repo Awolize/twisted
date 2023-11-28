@@ -1,4 +1,4 @@
 export class MatchPositionDto {
-  x: number
-  y: number
+	x: number;
+	y: number;
 }

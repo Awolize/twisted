@@ -1,6 +1,6 @@
 export class TournamentScheduleClashDTO {
-  id: number
-  registrationTime: number
-  startTime: number
-  cancelled: boolean
+	id: number;
+	registrationTime: number;
+	startTime: number;
+	cancelled: boolean;
 }

@@ -1,3 +1,3 @@
 export class ChampionsScoreDTO {
-  score: number
+	score: number;
 }

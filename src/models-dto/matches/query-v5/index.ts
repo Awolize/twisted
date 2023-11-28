@@ -1,1 +1,1 @@
-export * from './match-query-v5.dto'
+export * from "./match-query-v5.dto";

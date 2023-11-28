@@ -1,4 +1,4 @@
 export class GameModesDataDragonDTO {
-  gameMode: string
-  description: string
+	gameMode: string;
+	description: string;
 }
