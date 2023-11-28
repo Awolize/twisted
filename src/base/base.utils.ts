@@ -2,27 +2,27 @@ import { AxiosRequestConfig } from 'axios'
 import qs from 'querystring'
 
 export interface IParams {
-  [key: string]: string | number
+  [key: string]: string | number;
 }
 
 export interface IBaseApiParams {
   /**
    * If api response is 429 (rate limits) try reattempt after needed time (default true)
    */
-  rateLimitRetry?: boolean
+  rateLimitRetry?: boolean;
   /**
    * Number of time to retry after rate limit response (default 1)
    */
-  rateLimitRetryAttempts?: number
+  rateLimitRetryAttempts?: number;
   /**
    * Riot games api key
    */
-  key?: string,
+  key?: string;
   /**
    * Concurrency calls to riot (default infinity)
    * Concurrency per method (example: summoner api, match api, etc)
    */
-  concurrency?: number,
+  concurrency?: number;
   /**
    * Debug methods
    */
@@ -30,16 +30,16 @@ export interface IBaseApiParams {
     /**
      * Log methods execution time (default false)
      */
-    logTime?: boolean
+    logTime?: boolean;
     /**
      * Log urls (default false)
      */
-    logUrls?: boolean
+    logUrls?: boolean;
     /**
      * Log when is waiting for rate limits (default false)
      */
-    logRatelimits?: boolean
-  }
+    logRatelimits?: boolean;
+  };
 }
 
 export function waiter (ms: number) {

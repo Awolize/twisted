@@ -1,5 +1,5 @@
 export interface IMatchParticipantsTimeLineMap {
-  [key: string]: number
+  [key: string]: number;
 }
 
 export class MatchParticipantsTimelineDto {

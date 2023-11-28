@@ -10,7 +10,7 @@ import { BaseApiRiot } from '../../riot/base/base.api.riot'
  */
 export class AccountApi extends BaseApiRiot {
   private parsePath (endpoint: IEndpoint, by: FindAccountBy) {
-    let { path } = endpoint
+    const { path } = endpoint
     return path
   }
 

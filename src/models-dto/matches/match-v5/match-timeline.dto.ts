@@ -1,56 +1,57 @@
+// eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace MatchV5TimelineDTOs {
   export interface MatchTimelineDto {
-    metadata: Metadata
-    info: Info
+    metadata: Metadata;
+    info: Info;
   }
 
   export interface Info {
-    frameInterval: number
-    frames: Frame[]
-    gameId: number
-    participants: Participant[]
+    frameInterval: number;
+    frames: Frame[];
+    gameId: number;
+    participants: Participant[];
   }
 
   export interface Frame {
-    events: Event[]
-    participantFrames: { [key: string]: ParticipantFrame }
-    timestamp: number
+    events: Event[];
+    participantFrames: { [key: string]: ParticipantFrame };
+    timestamp: number;
   }
 
   export interface Event {
-    realTimestamp?: number
-    timestamp: number
-    type: EventType
-    level?: number
-    participantId?: number
-    itemId?: number
-    levelUpType?: LevelUpType
-    skillSlot?: number
-    afterId?: number
-    beforeId?: number
-    goldGain?: number
-    creatorId?: number
-    wardType?: WardType
-    assistingParticipantIds?: number[]
-    bounty?: number
-    killStreakLength?: number
-    killerId?: number
-    position?: Position
-    victimDamageDealt?: VictimDamage[]
-    victimDamageReceived?: VictimDamage[]
-    victimId?: number
-    killType?: KillType
-    multiKillLength?: number
-    buildingType?: BuildingType
-    laneType?: LaneType
-    teamId?: number
-    towerType?: TowerType
-    gameId?: number
-    winningTeam?: number
-    killerTeamId?: number
-    monsterSubType?: string
-    monsterType?: string
-    name?: string
+    realTimestamp?: number;
+    timestamp: number;
+    type: EventType;
+    level?: number;
+    participantId?: number;
+    itemId?: number;
+    levelUpType?: LevelUpType;
+    skillSlot?: number;
+    afterId?: number;
+    beforeId?: number;
+    goldGain?: number;
+    creatorId?: number;
+    wardType?: WardType;
+    assistingParticipantIds?: number[];
+    bounty?: number;
+    killStreakLength?: number;
+    killerId?: number;
+    position?: Position;
+    victimDamageDealt?: VictimDamage[];
+    victimDamageReceived?: VictimDamage[];
+    victimId?: number;
+    killType?: KillType;
+    multiKillLength?: number;
+    buildingType?: BuildingType;
+    laneType?: LaneType;
+    teamId?: number;
+    towerType?: TowerType;
+    gameId?: number;
+    winningTeam?: number;
+    killerTeamId?: number;
+    monsterSubType?: string;
+    monsterType?: string;
+    name?: string;
   }
 
   type BuildingType = 'INHIBITOR_BUILDING' | 'TOWER_BUILDING'
@@ -60,8 +61,8 @@ export namespace MatchV5TimelineDTOs {
   type LevelUpType = 'EVOLVE' | 'NORMAL'
 
   interface Position {
-    x: number
-    y: number
+    x: number;
+    y: number;
   }
 
   type TowerType = 'BASE_TURRET' | 'INNER_TURRET' | 'NEXUS_TURRET' | 'OUTER_TURRET'
@@ -85,15 +86,15 @@ export namespace MatchV5TimelineDTOs {
     | 'WARD_PLACED'
 
   interface VictimDamage {
-    basic: boolean
-    magicDamage: number
-    name: Name
-    participantId: number
-    physicalDamage: number
-    spellName: string
-    spellSlot: number
-    trueDamage: number
-    type: VictimDamageDealtType
+    basic: boolean;
+    magicDamage: number;
+    name: Name;
+    participantId: number;
+    physicalDamage: number;
+    spellName: string;
+    spellSlot: number;
+    trueDamage: number;
+    type: VictimDamageDealtType;
   }
 
   enum Name {
@@ -158,29 +159,29 @@ export namespace MatchV5TimelineDTOs {
   }
 
   interface ParticipantFrame {
-    championStats: { [key: string]: number }
-    currentGold: number
-    damageStats: { [key: string]: number }
-    goldPerSecond: number
-    jungleMinionsKilled: number
-    level: number
-    minionsKilled: number
-    participantId: number
-    position: Position
-    timeEnemySpentControlled: number
-    totalGold: number
-    xp: number
+    championStats: { [key: string]: number };
+    currentGold: number;
+    damageStats: { [key: string]: number };
+    goldPerSecond: number;
+    jungleMinionsKilled: number;
+    level: number;
+    minionsKilled: number;
+    participantId: number;
+    position: Position;
+    timeEnemySpentControlled: number;
+    totalGold: number;
+    xp: number;
   }
 
   interface Participant {
-    participantId: number
-    puuid: string
+    participantId: number;
+    puuid: string;
   }
 
   interface Metadata {
-    dataVersion: string
-    matchId: string
-    participants: string[]
+    dataVersion: string;
+    matchId: string;
+    participants: string[];
   }
 
 }

@@ -3,7 +3,7 @@ export class RunesReforgedDTO {
   key: string
   icon: string
   slots: {
-    runes: RunesReforgedSlotsDTO[]
+    runes: RunesReforgedSlotsDTO[];
   }
 }
 

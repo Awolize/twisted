@@ -2,7 +2,7 @@ import { MatchParticipantFrameDto } from './match-participant-frame.dto'
 import { MatchEventDto } from './match-event.dto'
 
 export interface IParticipantFrames {
-  [key: string]: MatchParticipantFrameDto
+  [key: string]: MatchParticipantFrameDto;
 }
 /**
  * Match timeline frame
