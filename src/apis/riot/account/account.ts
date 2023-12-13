@@ -1,8 +1,8 @@
 import * as _ from "lodash";
-import { endpointsAccountV1, IEndpoint } from "../../../endpoints/endpoints";
-import { AccountDTO } from "../../../models-dto/accounts/account.dto";
 import { RegionGroups } from "../../../constants";
 import { FindAccountBy } from "../../../constants/account.find";
+import { IEndpoint, endpointsAccountV1 } from "../../../endpoints/endpoints";
+import { AccountDTO } from "../../../models-dto/accounts/account.dto";
 import { BaseApiRiot } from "../../riot/base/base.api.riot";
 
 /**
@@ -41,7 +41,7 @@ export class AccountApi extends BaseApiRiot {
 	 */
 	public async getByPUUID(puuid: string, region: RegionGroups) {
 		const endpoint = _.cloneDeep(endpointsAccountV1.GetAccount);
-		const by = FindAccountBy.RIOT_ID;
+		const by = FindAccountBy.PUUID;
 		endpoint.path = this.parsePath(endpoint);
 		const params = {
 			accountName: puuid,
