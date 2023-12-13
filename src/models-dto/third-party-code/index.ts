@@ -1,1 +1,1 @@
-export * from './third-party-code.dto'
+export * from "./third-party-code.dto";

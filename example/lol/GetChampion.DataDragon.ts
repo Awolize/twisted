@@ -1,8 +1,8 @@
-import { LolApi } from '../../src'
-import { RealmServers, Champions } from '../../src/constants'
+import { LolApi } from "../../src";
+import { RealmServers, Champions } from "../../src/constants";
 
-const api = new LolApi()
+const api = new LolApi();
 
-export async function getChampionDetailsDataDragon () {
-  return api.DataDragon.getChampion(Champions.TWISTED_FATE)
+export async function getChampionDetailsDataDragon() {
+	return api.DataDragon.getChampion(Champions.TWISTED_FATE);
 }

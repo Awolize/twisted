@@ -2,8 +2,7 @@
  * Lol status service incidents updates translations
  */
 export class LolStatusIncidentsUpdateTranslations {
-  locale: string
-  content: string
-  // tslint:disable:variable-name
-  updated_at: string
+	locale: string;
+	content: string;
+	updated_at: string;
 }

@@ -1,7 +1,7 @@
-import { LolApi } from '../../src'
+import { LolApi } from "../../src";
 
-const api = new LolApi()
+const api = new LolApi();
 
-export async function runesReforgedDataDragon () {
-  return api.DataDragon.getRunesReforged()
+export async function runesReforgedDataDragon() {
+	return api.DataDragon.getRunesReforged();
 }
