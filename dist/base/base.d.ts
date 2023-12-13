@@ -1,8 +1,8 @@
-import { IEndpoint } from '../endpoints';
-import { ApiResponseDTO } from '../models-dto/api-response/api-response';
-import { IBaseApiParams, IParams } from './base.utils';
-import { BaseApiGames } from './base.const';
-import { RegionGroups } from '../constants';
+import { IEndpoint } from "../endpoints";
+import { ApiResponseDTO } from "../models-dto/api-response/api-response";
+import { IBaseApiParams, IParams } from "./base.utils";
+import { BaseApiGames } from "./base.const";
+import { RegionGroups } from "../constants";
 export declare class BaseApi<Region extends string> {
     protected readonly game: BaseApiGames;
     private readonly baseUrl;

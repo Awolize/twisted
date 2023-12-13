@@ -1,18 +1,18 @@
-import { MatchApi } from './match/match';
-import { LeagueApi } from './league/league';
-import { SummonerApi } from './summoner/summoner';
-import { ChallengesApi } from './challenges/challenges';
-import { ThirdPartyCode } from './thirdPartyCode/thirdPartyCode';
-import { ChampionApi } from './champion/champion';
-import { SpectatorApi } from './spectator/spectator';
-import { StatusApi } from './status/status';
-import { DataDragonService } from './dataDragon/DataDragonService';
-import { SeedApi } from './seed/seed';
-import { BaseApiLol } from './base/base.api.lol';
-import { ClashApi } from './clash/clash.api.lol';
-import { MatchV5Api } from './match/match-v5';
-import { StatusV4Api } from './status/status-v4';
-import { AccountApi } from '../riot/account/account';
+import { AccountApi } from "../riot/account/account";
+import { BaseApiLol } from "./base/base.api.lol";
+import { ChallengesApi } from "./challenges/challenges";
+import { ChampionApi } from "./champion/champion";
+import { ClashApi } from "./clash/clash.api.lol";
+import { DataDragonService } from "./dataDragon/DataDragonService";
+import { LeagueApi } from "./league/league";
+import { MatchApi } from "./match/match";
+import { MatchV5Api } from "./match/match-v5";
+import { SeedApi } from "./seed/seed";
+import { SpectatorApi } from "./spectator/spectator";
+import { StatusApi } from "./status/status";
+import { StatusV4Api } from "./status/status-v4";
+import { SummonerApi } from "./summoner/summoner";
+import { ThirdPartyCode } from "./thirdPartyCode/thirdPartyCode";
 /**
  * Classic league of legends api
  */

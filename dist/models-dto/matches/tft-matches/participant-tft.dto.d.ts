@@ -1,6 +1,6 @@
-import { TraitDto } from './trait.dto';
-import { UnitDto } from './unit.dto';
-import { CompanionDto } from './companion-dto.dto';
+import { TraitDto } from "./trait.dto";
+import { UnitDto } from "./unit.dto";
+import { CompanionDto } from "./companion-dto.dto";
 export declare class ParticipantDto {
     /**
      * Participant placement upon elimination.

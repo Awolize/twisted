@@ -22,7 +22,7 @@ class MatchTFTApi extends base_api_tft_1.BaseApiTft {
     get(matchId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                matchId
+                matchId,
             };
             return this.request(region, endpoints_1.endpointsTFTV1.Match, params);
         });
@@ -35,7 +35,7 @@ class MatchTFTApi extends base_api_tft_1.BaseApiTft {
     list(summonerPUUID, region, query) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                summonerPUUID
+                summonerPUUID,
             };
             return this.request(region, endpoints_1.endpointsTFTV1.MatchListing, params, false, query);
         });
@@ -45,9 +45,6 @@ class MatchTFTApi extends base_api_tft_1.BaseApiTft {
      */
     listWithDetails(summonerPUUID, region, query) {
         return __awaiter(this, void 0, void 0, function* () {
-            const params = {
-                summonerPUUID
-            };
             const response = [];
             // Match list
             const { response: ids } = yield this.list(summonerPUUID, region, query);

@@ -21,7 +21,7 @@ class MatchV5Api extends base_api_lol_1.BaseApiLol {
     generateResponse(error) {
         return {
             rateLimits: error.rateLimits,
-            response: []
+            response: [],
         };
     }
     /**
@@ -32,7 +32,7 @@ class MatchV5Api extends base_api_lol_1.BaseApiLol {
     get(matchId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                matchId
+                matchId,
             };
             return yield this.request(region, endpoints_1.endpointsV5.Match, params);
         });
@@ -46,13 +46,16 @@ class MatchV5Api extends base_api_lol_1.BaseApiLol {
     list(puuid, region, query) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                summonerPUUID: puuid
+                summonerPUUID: puuid,
             };
             try {
                 return yield this.request(region, endpoints_1.endpointsV5.MatchListing, params, false, query);
             }
             catch (e) {
-                if (e.status !== http_status_codes_1.NOT_FOUND) {
+                if (typeof e === "object" &&
+                    e !== null &&
+                    "status" in e &&
+                    e.status !== http_status_codes_1.NOT_FOUND) {
                     throw e;
                 }
                 return this.generateResponse(e);
@@ -62,7 +65,7 @@ class MatchV5Api extends base_api_lol_1.BaseApiLol {
     timeline(matchId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                matchId
+                matchId,
             };
             return this.request(region, endpoints_1.endpointsV5.MatchTimeline, params);
         });

@@ -1,4 +1,4 @@
-import { MatchPositionDto } from './match-position.dto';
+import { MatchPositionDto } from "./match-position.dto";
 export declare class MatchParticipantFrameDto {
     totalGold: number;
     teamScore: number;

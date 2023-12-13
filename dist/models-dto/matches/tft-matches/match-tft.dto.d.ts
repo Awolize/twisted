@@ -1,5 +1,5 @@
-import { InfoDto } from './info.dto';
-import { MetadataDto } from './metadata.dto';
+import { InfoDto } from "./info.dto";
+import { MetadataDto } from "./metadata.dto";
 export declare class MatchTFTDTO {
     /**
      * Match info

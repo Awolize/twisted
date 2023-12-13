@@ -1,6 +1,6 @@
-import { AccountDTO } from '../../../models-dto/accounts/account.dto';
-import { RegionGroups } from '../../../constants';
-import { BaseApiRiot } from '../../riot/base/base.api.riot';
+import { RegionGroups } from "../../../constants";
+import { AccountDTO } from "../../../models-dto/accounts/account.dto";
+import { BaseApiRiot } from "../../riot/base/base.api.riot";
 /**
  * Account methods
  */

@@ -1,4 +1,4 @@
-import { LeagueItemDTO } from './league-item.dto';
+import { LeagueItemDTO } from "./league-item.dto";
 export declare class LeagueListDTO {
     leagueId: string;
     tier: string;

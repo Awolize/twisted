@@ -1,7 +1,7 @@
-import { RegionGroups } from '../../../constants';
-import { BaseApiTft } from '../base/base.api.tft';
-import { MatchTFTDTO } from '../../../models-dto/matches/tft-matches/match-tft.dto';
-import { MatchTFTQueryDTO } from '../../../models-dto/matches/tft-matches/match-tft-query.dto';
+import { RegionGroups } from "../../../constants";
+import { BaseApiTft } from "../base/base.api.tft";
+import { MatchTFTDTO } from "../../../models-dto/matches/tft-matches/match-tft.dto";
+import { MatchTFTQueryDTO } from "../../../models-dto/matches/tft-matches/match-tft-query.dto";
 export declare class MatchTFTApi extends BaseApiTft {
     /**
      * Get match by id

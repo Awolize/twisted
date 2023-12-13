@@ -1,8 +1,8 @@
-import { RegionGroups } from '../../../constants';
-import { ApiResponseDTO } from '../../../models-dto';
-import { MatchV5DTOs, MatchV5TimelineDTOs } from '../../../models-dto/matches/match-v5';
-import { MatchQueryV5DTO } from '../../../models-dto/matches/query-v5';
-import { BaseApiLol } from '../base/base.api.lol';
+import { RegionGroups } from "../../../constants";
+import { ApiResponseDTO } from "../../../models-dto";
+import { MatchV5DTOs, MatchV5TimelineDTOs } from "../../../models-dto/matches/match-v5";
+import { MatchQueryV5DTO } from "../../../models-dto/matches/query-v5";
+import { BaseApiLol } from "../base/base.api.lol";
 /**
  * Match methods
  */

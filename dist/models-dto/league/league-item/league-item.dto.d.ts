@@ -1,4 +1,4 @@
-import { MiniSeriesDTO } from '../summoner-league/miniseries.dto';
+import { MiniSeriesDTO } from "../summoner-league/miniseries.dto";
 export declare class LeagueItemDTO {
     summonerName: string;
     hotStreak: boolean;

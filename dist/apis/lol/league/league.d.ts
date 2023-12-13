@@ -1,8 +1,8 @@
-import { SummonerLeagueDto } from '../../../models-dto/league/summoner-league/summoner-league.dto';
-import { LeagueEntryDTO } from '../../../models-dto/league/league-exp/league-entry.dto';
-import { Queues, Tiers, Divisions, Regions } from '../../../constants';
-import { LeagueListDTO } from '../../../models-dto/league/league-item/league-list.dto';
-import { BaseApiLol } from '../base/base.api.lol';
+import { SummonerLeagueDto } from "../../../models-dto/league/summoner-league/summoner-league.dto";
+import { LeagueEntryDTO } from "../../../models-dto/league/league-exp/league-entry.dto";
+import { Queues, Tiers, Divisions, Regions } from "../../../constants";
+import { LeagueListDTO } from "../../../models-dto/league/league-item/league-list.dto";
+import { BaseApiLol } from "../base/base.api.lol";
 /**
  * League methods
  */

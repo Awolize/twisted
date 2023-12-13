@@ -1,5 +1,5 @@
-import { MatchParticipantFrameDto } from './match-participant-frame.dto';
-import { MatchEventDto } from './match-event.dto';
+import { MatchParticipantFrameDto } from "./match-participant-frame.dto";
+import { MatchEventDto } from "./match-event.dto";
 export interface IParticipantFrames {
     [key: string]: MatchParticipantFrameDto;
 }

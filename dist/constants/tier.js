@@ -15,4 +15,4 @@ var Tiers;
     Tiers["SILVER"] = "SILVER";
     Tiers["BRONZE"] = "BRONZE";
     Tiers["IRON"] = "IRON";
-})(Tiers = exports.Tiers || (exports.Tiers = {}));
+})(Tiers || (exports.Tiers = Tiers = {}));

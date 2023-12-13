@@ -1,7 +1,11 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -14,7 +18,7 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
@@ -40,7 +44,7 @@ const service_unavailable_error_1 = require("../errors/service-unavailable.error
 const base_const_1 = require("./base.const");
 const logger_base_1 = require("./logger.base");
 const request_base_1 = require("./request.base");
-dotenv_1.config();
+(0, dotenv_1.config)();
 class BaseApi {
     constructor(param) {
         this.game = base_const_1.BaseApiGames.LOL;
@@ -50,39 +54,39 @@ class BaseApi {
         this.debug = {
             logTime: false,
             logUrls: false,
-            logRatelimits: false
+            logRatelimits: false,
         };
-        this.key = process.env.RIOT_API_KEY || '';
-        if (typeof param === 'string') {
+        this.key = process.env.RIOT_API_KEY || "";
+        if (typeof param === "string") {
             this.key = param;
         }
         else if (param) {
-            if (typeof param.key === 'string') {
+            if (typeof param.key === "string") {
                 this.key = param.key;
             }
             this.setParams(param);
         }
     }
     setParams(param) {
-        if (typeof param.rateLimitRetry !== 'undefined') {
+        if (typeof param.rateLimitRetry !== "undefined") {
             this.rateLimitRetry = param.rateLimitRetry;
         }
-        if (typeof param.rateLimitRetryAttempts !== 'undefined') {
+        if (typeof param.rateLimitRetryAttempts !== "undefined") {
             this.rateLimitRetryAttempts = param.rateLimitRetryAttempts;
         }
-        if (typeof param.debug !== 'undefined') {
-            if (typeof param.debug.logTime !== 'undefined') {
-                _.set(this.debug, 'logTime', param.debug.logTime);
+        if (typeof param.debug !== "undefined") {
+            if (typeof param.debug.logTime !== "undefined") {
+                _.set(this.debug, "logTime", param.debug.logTime);
             }
-            if (typeof param.debug.logUrls !== 'undefined') {
-                _.set(this.debug, 'logUrls', param.debug.logUrls);
+            if (typeof param.debug.logUrls !== "undefined") {
+                _.set(this.debug, "logUrls", param.debug.logUrls);
             }
-            if (typeof param.debug.logRatelimits !== 'undefined') {
-                _.set(this.debug, 'logRatelimits', param.debug.logRatelimits);
+            if (typeof param.debug.logRatelimits !== "undefined") {
+                _.set(this.debug, "logRatelimits", param.debug.logRatelimits);
             }
         }
         this.concurrency = param.concurrency;
-        if (typeof param.concurrency !== 'undefined') {
+        if (typeof param.concurrency !== "undefined") {
             request_base_1.RequestBase.setConcurrency(param.concurrency);
         }
         else {
@@ -91,26 +95,26 @@ class BaseApi {
     }
     getRateLimits(headers) {
         return {
-            Type: _.get(headers, 'x-rate-limit-type', null),
-            AppRateLimit: _.get(headers, 'x-app-rate-limit', null),
-            AppRateLimitCount: _.get(headers, 'x-app-rate-limit-count', null),
-            MethodRateLimit: _.get(headers, 'x-method-rate-limit'),
-            MethodRatelimitCount: _.get(headers, 'x-method-rate-limit-count', null),
-            RetryAfter: +_.get(headers, 'retry-after', 0),
-            EdgeTraceId: _.get(headers, 'x-riot-edge-trace-id')
+            Type: _.get(headers, "x-rate-limit-type", null),
+            AppRateLimit: _.get(headers, "x-app-rate-limit", null),
+            AppRateLimitCount: _.get(headers, "x-app-rate-limit-count", null),
+            MethodRateLimit: _.get(headers, "x-method-rate-limit"),
+            MethodRatelimitCount: _.get(headers, "x-method-rate-limit-count", null),
+            RetryAfter: +_.get(headers, "retry-after", 0),
+            EdgeTraceId: _.get(headers, "x-riot-edge-trace-id"),
         };
     }
     getBaseUrl() {
-        return this.baseUrl.replace(':game', this.game);
+        return this.baseUrl.replace(":game", this.game);
     }
     getApiUrl(endpoint, params) {
         const { prefix, version, path } = endpoint;
         const basePath = `${prefix}/v${version}/${path}`;
-        const re = /\$\(([^\)]+)?\)/g;
+        const re = /\$\(([^)]+)?\)/g;
         let base = `${this.getBaseUrl()}/${basePath}`;
         let match;
-        // tslint:disable:no-conditional-assignment
-        while (match = re.exec(base)) {
+        // eslint-disable-next-line no-cond-assign
+        while ((match = re.exec(base))) {
             const [key] = match;
             const value = encodeURI(String(params[match[1]]));
             base = base.replace(key, value);
@@ -123,17 +127,18 @@ class BaseApi {
         if (!e) {
             return false;
         }
-        return e.status === http_status_codes_1.TOO_MANY_REQUESTS || ((_a = e.response) === null || _a === void 0 ? void 0 : _a.status) === http_status_codes_1.TOO_MANY_REQUESTS;
+        return (e.status === http_status_codes_1.TOO_MANY_REQUESTS || ((_a = e.response) === null || _a === void 0 ? void 0 : _a.status) === http_status_codes_1.TOO_MANY_REQUESTS);
     }
     isServiceUnavailableError(e) {
         var _a;
         if (!e) {
             return false;
         }
-        return e.status === http_status_codes_1.SERVICE_UNAVAILABLE || ((_a = e.response) === null || _a === void 0 ? void 0 : _a.status) === http_status_codes_1.SERVICE_UNAVAILABLE;
+        return (e.status === http_status_codes_1.SERVICE_UNAVAILABLE ||
+            ((_a = e.response) === null || _a === void 0 ? void 0 : _a.status) === http_status_codes_1.SERVICE_UNAVAILABLE);
     }
     getError(e) {
-        const headers = this.getRateLimits(_.get(e, 'response.headers'));
+        const headers = this.getRateLimits(_.get(e, "response.headers"));
         if (this.isRateLimitError(e)) {
             return new rate_limit_error_1.RateLimitError(headers);
         }
@@ -148,9 +153,11 @@ class BaseApi {
     }
     retryRateLimit(region, endpoint, params, e) {
         return __awaiter(this, void 0, void 0, function* () {
-            let baseError = this.getError(e);
+            const baseError = this.getError(e);
             const isRateLimitError = this.isRateLimitError(e) || this.isServiceUnavailableError(e);
-            if (!this.rateLimitRetry || !isRateLimitError || this.rateLimitRetryAttempts < 1) {
+            if (!this.rateLimitRetry ||
+                !isRateLimitError ||
+                this.rateLimitRetryAttempts < 1) {
                 throw baseError;
             }
             const forceError = true;
@@ -162,21 +169,22 @@ class BaseApi {
                 catch (error) {
                     const parseError = this.getError(error);
                     // Isn't rate limit error
-                    if (!this.isRateLimitError(error) && !this.isServiceUnavailableError(error)) {
+                    if (!this.isRateLimitError(error) &&
+                        !this.isServiceUnavailableError(error)) {
                         throw parseError;
                     }
                     // Set a new attemp
-                    const { rateLimits: { RetryAfter } } = parseError;
-                    const waitSeconds = this.isServiceUnavailableError(e) ?
-                        base_const_1.BaseConstants.SERVICE_UNAVAILABLE :
-                        base_const_1.BaseConstants.RATE_LIMIT;
-                    const msToWait = ((RetryAfter || 0) * 1000) + (waitSeconds * 1000 * Math.random());
+                    const { rateLimits: { RetryAfter }, } = parseError;
+                    const waitSeconds = this.isServiceUnavailableError(e)
+                        ? base_const_1.BaseConstants.SERVICE_UNAVAILABLE
+                        : base_const_1.BaseConstants.RATE_LIMIT;
+                    const msToWait = (RetryAfter || 0) * 1000 + waitSeconds * 1000 * Math.random();
                     // Log
                     if (this.debug.logRatelimits) {
                         logger_base_1.Logger.rateLimit(endpoint, msToWait);
                     }
                     // Wait
-                    yield base_utils_1.waiter(msToWait);
+                    yield (0, base_utils_1.waiter)(msToWait);
                 }
             }
             // Throw rate limit
@@ -189,7 +197,7 @@ class BaseApi {
             rateLimitRetry: this.rateLimitRetry,
             rateLimitRetryAttempts: this.rateLimitRetryAttempts,
             concurrency: this.concurrency,
-            debug: this.debug
+            debug: this.debug,
         };
     }
     request(region, endpoint, params, forceError, queryParams) {
@@ -208,12 +216,11 @@ class BaseApi {
             }
             const options = {
                 url,
-                method: 'GET',
+                method: "GET",
                 headers: {
-                    Origin: null,
-                    'X-Riot-Token': this.key
+                    "X-Riot-Token": this.key,
                 },
-                params: queryParams
+                params: queryParams,
             };
             if (this.debug.logUrls) {
                 logger_base_1.Logger.uri(options, endpoint);
@@ -223,7 +230,7 @@ class BaseApi {
                 const { data, headers } = apiResponse;
                 return {
                     rateLimits: this.getRateLimits(headers),
-                    response: data
+                    response: data,
                 };
             }
             catch (e) {

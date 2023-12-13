@@ -1,8 +1,8 @@
-import { BaseApiLol } from '../base/base.api.lol';
-import { ClashPlayerDTO } from '../../../models-dto/clash/player.clash.dto';
-import { Regions } from '../../../constants';
-import { ClashTeamDto } from '../../../models-dto/clash/team.clash.dto';
-import { TournamentClashDTO } from '../../../models-dto/clash/tournament/tournament.clash.dto';
+import { BaseApiLol } from "../base/base.api.lol";
+import { ClashPlayerDTO } from "../../../models-dto/clash/player.clash.dto";
+import { Regions } from "../../../constants";
+import { ClashTeamDto } from "../../../models-dto/clash/team.clash.dto";
+import { TournamentClashDTO } from "../../../models-dto/clash/tournament/tournament.clash.dto";
 /**
  * Clash api methods
  */

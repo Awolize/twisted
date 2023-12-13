@@ -1,4 +1,4 @@
-import { MiniSeriesDTO } from '../summoner-league';
+import { MiniSeriesDTO } from "../summoner-league";
 export declare class LeagueEntryDTO {
     readonly leagueId: string;
     readonly summonerId: string;

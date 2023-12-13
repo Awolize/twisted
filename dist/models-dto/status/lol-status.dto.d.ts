@@ -1,4 +1,4 @@
-import { LolStatusServiceDTO } from './lol-status-service.dto';
+import { LolStatusServiceDTO } from "./lol-status-service.dto";
 /**
  * Lol Status response
  */

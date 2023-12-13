@@ -1,4 +1,4 @@
-import { ClashPlayerDTO } from './player.clash.dto';
+import { ClashPlayerDTO } from "./player.clash.dto";
 export declare class ClashTeamDto {
     id: string;
     tournamentId: number;

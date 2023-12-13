@@ -1,5 +1,5 @@
-import { IEndpoint } from '../endpoints/endpoints';
-import { AxiosRequestConfig } from 'axios';
+import { IEndpoint } from "../endpoints/endpoints";
+import { AxiosRequestConfig } from "axios";
 export declare class Logger {
     private static parseName;
     static start(endpoint: IEndpoint, uri?: string): void;

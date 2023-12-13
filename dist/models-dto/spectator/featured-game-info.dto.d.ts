@@ -1,6 +1,6 @@
-import { BannedChampion } from '../matches/match/match-teams-bans.dto';
-import { ObserverDTO } from './observer.dto';
-import { ParticipantDTO } from './participant.dto';
+import { BannedChampion } from "../matches/match/match-teams-bans.dto";
+import { ObserverDTO } from "./observer.dto";
+import { ParticipantDTO } from "./participant.dto";
 export declare class FeaturedGameInfo {
     /**
      * The ID of the game

@@ -1,4 +1,4 @@
-import { BannedChampion } from './match-teams-bans.dto';
+import { BannedChampion } from "./match-teams-bans.dto";
 export declare class MatchTeamsDto {
     /**
      * Flag indicating whether or not the team scored the first Dragon kill.

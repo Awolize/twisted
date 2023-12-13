@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RateLimitError = void 0;
 const http_status_codes_1 = require("http-status-codes");
-const message = 'Rate limit error';
+const message = "Rate limit error";
 /**
  * Rate limit error
  */

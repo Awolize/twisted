@@ -1,6 +1,6 @@
-import { IErrors } from '.';
-import { RateLimitDto } from '../models-dto/rate-limit/rate-limit.dto';
-import * as Axios from 'axios';
+import { IErrors } from ".";
+import { RateLimitDto } from "../models-dto/rate-limit/rate-limit.dto";
+import * as Axios from "axios";
 /**
  * Not api key found
  */

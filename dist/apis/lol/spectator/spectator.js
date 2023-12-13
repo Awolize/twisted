@@ -37,16 +37,16 @@ class SpectatorApi extends base_api_lol_1.BaseApiLol {
     activeGame(encryptedSummonerId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                encryptedSummonerId
+                encryptedSummonerId,
             };
             try {
                 return yield this.request(region, endpoints_1.endpointsV4.SpectatorSummoner, params);
             }
             catch (e) {
                 this.errorHandler(e);
-                const message = 'No active game found';
+                const message = "No active game found";
                 const response = {
-                    message
+                    message,
                 };
                 return response;
             }

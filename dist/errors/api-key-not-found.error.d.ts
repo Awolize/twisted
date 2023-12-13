@@ -1,4 +1,4 @@
-import { IErrors } from '.';
+import { IErrors } from ".";
 /**
  * Not api key found
  */

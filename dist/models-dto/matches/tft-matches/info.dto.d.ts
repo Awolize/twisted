@@ -1,4 +1,4 @@
-import { ParticipantDto } from './participant-tft.dto';
+import { ParticipantDto } from "./participant-tft.dto";
 export declare class InfoDto {
     /**
      * Unix timestamp.

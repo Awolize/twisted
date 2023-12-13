@@ -1,5 +1,5 @@
-import { IErrors } from '.';
-import { RateLimitDto } from '../models-dto/rate-limit/rate-limit.dto';
+import { IErrors } from ".";
+import { RateLimitDto } from "../models-dto/rate-limit/rate-limit.dto";
 /**
  * Rate limit error
  */

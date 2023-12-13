@@ -1,4 +1,4 @@
-import { MatchDto } from '../../../models-dto/matches/match/match.dto';
+import { MatchDto } from "../../../models-dto/matches/match/match.dto";
 export declare class SeedApi {
     private readonly baseUrl;
     private request;

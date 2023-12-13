@@ -6,8 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getChampionNameCapital = exports.getChampionName = exports.Champions = void 0;
 const lodash_1 = require("lodash");
 const axios_1 = __importDefault(require("axios"));
-// Untyped modules
-const { CamelCase } = require('camelcasejs');
+const lodash_2 = __importDefault(require("lodash"));
 /**
  * Champions - Used as fallback
  */
@@ -177,28 +176,30 @@ var Champions;
     Champions[Champions["NILAH"] = 895] = "NILAH";
     Champions[Champions["KSANTE"] = 897] = "KSANTE";
     Champions[Champions["MILIO"] = 902] = "MILIO";
-})(Champions = exports.Champions || (exports.Champions = {}));
-const championIdMap = lodash_1.invert(Champions);
+})(Champions || (exports.Champions = Champions = {}));
+const championIdMap = (0, lodash_1.invert)(Champions);
 /**
  * Fetching champion IDs from CommunityDragon's PBE content. See https://www.communitydragon.org/
  */
 if (process.env.UPDATE_CHAMPION_IDS) {
     const updateChampionIDs = () => {
-        const CD_CHAMPIONS = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-summary.json';
+        const CD_CHAMPIONS = "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-summary.json";
         try {
-            void axios_1.default(CD_CHAMPIONS)
-                .then(({ data: cdChamps }) => {
+            void (0, axios_1.default)(CD_CHAMPIONS).then(({ data: cdChamps }) => {
                 cdChamps.forEach(({ id, alias }) => {
-                    const championAlias = alias.replace(/[a-z][A-Z]/g, letter => letter[0] + '_' + letter[1]).toUpperCase();
+                    const championAlias = alias
+                        .replace(/[a-z][A-Z]/g, (letter) => letter[0] + "_" + letter[1])
+                        .toUpperCase();
                     if (!championIdMap[id]) {
                         championIdMap[id] = championIdMap[id] || championAlias;
-                        championIdMap[championAlias] = championIdMap[championAlias] || '' + id;
+                        championIdMap[championAlias] =
+                            championIdMap[championAlias] || "" + id;
                     }
                 });
             });
         }
         catch (e) {
-            console.warn('Updating champion IDs failed');
+            console.warn("Updating champion IDs failed");
         }
     };
     // Schedule once every day.
@@ -220,14 +221,14 @@ exports.getChampionName = getChampionName;
  * Get champion and by id and return capitalize string
  */
 function getChampionNameCapital(champ) {
-    let name = typeof champ === 'number' ? getChampionName(champ) : champ;
-    name = CamelCase(name.toLowerCase());
+    let name = typeof champ === "number" ? getChampionName(champ) : champ;
+    name = lodash_2.default.camelCase(name.toLowerCase());
     name = name.charAt(0).toUpperCase() + name.slice(1);
     switch (name) {
-        case 'Reksai':
-            return 'RekSai';
-        case 'JarvanIv':
-            return 'JarvanIV';
+        case "Reksai":
+            return "RekSai";
+        case "JarvanIv":
+            return "JarvanIV";
     }
     return name;
 }

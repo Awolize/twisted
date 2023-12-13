@@ -1,6 +1,6 @@
-import { SummonerV4DTO } from '../../../models-dto/summoners/summoner.dto';
-import { Regions } from '../../../constants';
-import { BaseApiTft } from '../base/base.api.tft';
+import { SummonerV4DTO } from "../../../models-dto/summoners/summoner.dto";
+import { Regions } from "../../../constants";
+import { BaseApiTft } from "../base/base.api.tft";
 /**
  * Summoner methods
  */

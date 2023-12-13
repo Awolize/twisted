@@ -1,6 +1,6 @@
-import { MatchParticipantsIdentitiesDto } from './match-participantsIdentities.dto';
-import { MatchTeamsDto } from './match-teams.dto';
-import { MatchParticipantDTO } from './match-participant.dto';
+import { MatchParticipantsIdentitiesDto } from "./match-participantsIdentities.dto";
+import { MatchTeamsDto } from "./match-teams.dto";
+import { MatchParticipantDTO } from "./match-participant.dto";
 /**
  * Match dto
  */

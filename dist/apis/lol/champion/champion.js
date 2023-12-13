@@ -33,7 +33,7 @@ class ChampionApi extends base_api_lol_1.BaseApiLol {
     masteryBySummoner(encryptedSummonerId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                encryptedSummonerId
+                encryptedSummonerId,
             };
             return this.request(region, endpoints_1.endpointsV4.ChampionMasteryBySummoner, params);
         });
@@ -47,7 +47,7 @@ class ChampionApi extends base_api_lol_1.BaseApiLol {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
                 encryptedSummonerId,
-                championId
+                championId,
             };
             return this.request(region, endpoints_1.endpointsV4.ChampionMasteryBySummonerChampion, params);
         });
@@ -60,14 +60,14 @@ class ChampionApi extends base_api_lol_1.BaseApiLol {
     championsScore(encryptedSummonerId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                encryptedSummonerId
+                encryptedSummonerId,
             };
             let { response: score } = yield this.request(region, endpoints_1.endpointsV4.ChampionsScore, params);
-            if (typeof score !== 'number') {
+            if (typeof score !== "number") {
                 score = 0;
             }
             return {
-                score
+                score,
             };
         });
     }

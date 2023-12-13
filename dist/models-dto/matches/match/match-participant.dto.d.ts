@@ -1,7 +1,7 @@
-import { MatchParticipantsStatsDto } from './match-participants-stats.dto';
-import { MatchParticipantsRuneDto } from './match-participants-rune.dto';
-import { MatchParticipantsTimelineDto } from './match-participants-timeline.dto';
-import { MatchParticipantsMasteryDto } from './match-participants-mastery.dto';
+import { MatchParticipantsStatsDto } from "./match-participants-stats.dto";
+import { MatchParticipantsRuneDto } from "./match-participants-rune.dto";
+import { MatchParticipantsTimelineDto } from "./match-participants-timeline.dto";
+import { MatchParticipantsMasteryDto } from "./match-participants-mastery.dto";
 /**
  * Participant
  */

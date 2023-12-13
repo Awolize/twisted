@@ -1,4 +1,4 @@
-import { MatchPositionDto } from './match-position.dto';
+import { MatchPositionDto } from "./match-position.dto";
 /**
  * Match Event DTO
  */

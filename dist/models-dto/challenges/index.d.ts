@@ -1,1 +1,1 @@
-export * from './challenges.dto';
+export * from "./challenges.dto";

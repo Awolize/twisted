@@ -25,13 +25,13 @@ class MatchApi extends base_api_lol_1.BaseApiLol {
                 matches: [],
                 startIndex: 0,
                 endIndex: 0,
-                totalGames: 0
-            }
+                totalGames: 0,
+            },
         };
     }
     map(match) {
         match.response.teams = match.response.teams.map((team) => {
-            team.win = String(team.win) === 'Win';
+            team.win = String(team.win) === "Win";
             return team;
         });
         match.response.remake = match.response.teams.every((t) => !t.firstTower);
@@ -46,7 +46,7 @@ class MatchApi extends base_api_lol_1.BaseApiLol {
     get(matchId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                matchId
+                matchId,
             };
             const data = yield this.request(region, endpoints_1.endpointsV4.Match, params);
             return this.map(data);
@@ -61,13 +61,16 @@ class MatchApi extends base_api_lol_1.BaseApiLol {
     list(encryptedAccountId, region, query) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                encryptedAccountId
+                encryptedAccountId,
             };
             try {
                 return yield this.request(region, endpoints_1.endpointsV4.MatchListing, params, false, query);
             }
             catch (e) {
-                if (e.status !== http_status_codes_1.NOT_FOUND) {
+                if (typeof e === "object" &&
+                    e !== null &&
+                    "status" in e &&
+                    e.status !== http_status_codes_1.NOT_FOUND) {
                     throw e;
                 }
                 return this.generateResponse(e);
@@ -83,7 +86,7 @@ class MatchApi extends base_api_lol_1.BaseApiLol {
     timeline(matchId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                matchId
+                matchId,
             };
             return this.request(region, endpoints_1.endpointsV4.MatchTimeline, params);
         });

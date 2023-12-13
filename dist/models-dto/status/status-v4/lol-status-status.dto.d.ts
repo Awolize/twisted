@@ -1,5 +1,5 @@
-import { LolStatusContentDTO } from './lol-status-content.dto';
-import { LolStatusUpdateDTO } from './lol-status-update.dto';
+import { LolStatusContentDTO } from "./lol-status-content.dto";
+import { LolStatusUpdateDTO } from "./lol-status-update.dto";
 /**
  * Lol Status dto
  */

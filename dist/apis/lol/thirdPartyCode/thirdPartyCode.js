@@ -33,7 +33,7 @@ class ThirdPartyCode extends base_api_lol_1.BaseApiLol {
             let code;
             let rateLimits;
             const params = {
-                encryptedSummonerId
+                encryptedSummonerId,
             };
             try {
                 const data = yield this.request(region, endpoints_1.endpointsV4.ThirdPartyCode, params);
@@ -47,8 +47,8 @@ class ThirdPartyCode extends base_api_lol_1.BaseApiLol {
             return {
                 rateLimits,
                 response: {
-                    code
-                }
+                    code,
+                },
             };
         });
     }

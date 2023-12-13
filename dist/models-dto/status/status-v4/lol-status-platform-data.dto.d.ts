@@ -1,4 +1,4 @@
-import { LolStatusStatusDTO } from './lol-status-status.dto';
+import { LolStatusStatusDTO } from "./lol-status-status.dto";
 /**
  * Lol Status Platform Data dto
  */

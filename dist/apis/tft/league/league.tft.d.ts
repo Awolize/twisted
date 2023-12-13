@@ -1,7 +1,7 @@
-import { Regions } from '../../../constants';
-import { BaseApiTft } from '../base/base.api.tft';
-import { LeagueEntryDTO } from '../../../models-dto/league/tft-league';
-import { LeagueListDTO } from '../../../models-dto';
+import { Regions } from "../../../constants";
+import { BaseApiTft } from "../base/base.api.tft";
+import { LeagueEntryDTO } from "../../../models-dto/league/tft-league";
+import { LeagueListDTO } from "../../../models-dto";
 export declare class LeagueTFTApi extends BaseApiTft {
     /**
      * Get league entries for a given summoner ID

@@ -24,7 +24,7 @@ class LeagueApi extends base_api_lol_1.BaseApiLol {
     bySummoner(encryptedSummonerId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                encryptedSummonerId
+                encryptedSummonerId,
             };
             return this.request(region, endpoints_1.endpointsV4.SummonerLeague, params);
         });
@@ -41,7 +41,7 @@ class LeagueApi extends base_api_lol_1.BaseApiLol {
             const params = {
                 queue,
                 tier,
-                division
+                division,
             };
             return this.request(region, endpoints_1.endpointsV4.LeagueExp, params);
         });
@@ -59,7 +59,7 @@ class LeagueApi extends base_api_lol_1.BaseApiLol {
             const params = {
                 queue,
                 tier,
-                division
+                division,
             };
             return this.request(region, endpoints_1.endpointsV4.LeagueEntries, params, false, { page });
         });
@@ -72,7 +72,7 @@ class LeagueApi extends base_api_lol_1.BaseApiLol {
     get(leagueId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                leagueId
+                leagueId,
             };
             return this.request(region, endpoints_1.endpointsV4.League, params);
         });
@@ -85,7 +85,7 @@ class LeagueApi extends base_api_lol_1.BaseApiLol {
     getChallengerLeaguesByQueue(queue, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                queue
+                queue,
             };
             return this.request(region, endpoints_1.endpointsV4.ChallengerLeaguesByQueue, params);
         });
@@ -98,7 +98,7 @@ class LeagueApi extends base_api_lol_1.BaseApiLol {
     getGrandMasterLeagueByQueue(queue, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                queue
+                queue,
             };
             return this.request(region, endpoints_1.endpointsV4.GrandMasterLeaguesByQueue, params);
         });
@@ -111,7 +111,7 @@ class LeagueApi extends base_api_lol_1.BaseApiLol {
     getMasterLeagueByQueue(queue, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                queue
+                queue,
             };
             return this.request(region, endpoints_1.endpointsV4.MasterLeaguesByQueue, params);
         });

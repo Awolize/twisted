@@ -1,4 +1,4 @@
-import { MatchTimeLineFrameDto } from './matchm-timeline-frame.dto';
+import { MatchTimeLineFrameDto } from "./matchm-timeline-frame.dto";
 /**
  * Match time line
  */

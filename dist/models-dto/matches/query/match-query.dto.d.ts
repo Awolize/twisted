@@ -1,4 +1,4 @@
-import { Seasons, Champions } from '../../../constants';
+import { Seasons, Champions } from "../../../constants";
 export declare class MatchQueryDTO {
     /**
      * Set of champion IDs for filtering the matchlist.

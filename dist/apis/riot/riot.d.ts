@@ -1,5 +1,5 @@
-import { BaseApiRiot } from './base/base.api.riot';
-import { AccountApi } from './account/account';
+import { AccountApi } from "./account/account";
+import { BaseApiRiot } from "./base/base.api.riot";
 /**
  * Riot Api
  */

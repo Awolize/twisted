@@ -1,7 +1,11 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -14,7 +18,7 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
@@ -30,15 +34,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountApi = void 0;
 const _ = __importStar(require("lodash"));
-const endpoints_1 = require("../../../endpoints/endpoints");
 const account_find_1 = require("../../../constants/account.find");
+const endpoints_1 = require("../../../endpoints/endpoints");
 const base_api_riot_1 = require("../../riot/base/base.api.riot");
 /**
  * Account methods
  */
 class AccountApi extends base_api_riot_1.BaseApiRiot {
-    parsePath(endpoint, by) {
-        let { path } = endpoint;
+    parsePath(endpoint) {
+        const { path } = endpoint;
         return path;
     }
     /**
@@ -50,10 +54,10 @@ class AccountApi extends base_api_riot_1.BaseApiRiot {
         return __awaiter(this, void 0, void 0, function* () {
             const endpoint = _.cloneDeep(endpoints_1.endpointsAccountV1.GetAccount);
             const by = account_find_1.FindAccountBy.RIOT_ID;
-            endpoint.path = this.parsePath(endpoint, by);
+            endpoint.path = this.parsePath(endpoint);
             const params = {
-                accountName: gameName + '/' + tagLine,
-                by
+                accountName: `${gameName}/${tagLine}`,
+                by,
             };
             return this.request(region, endpoint, params);
         });
@@ -66,11 +70,11 @@ class AccountApi extends base_api_riot_1.BaseApiRiot {
     getByPUUID(puuid, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const endpoint = _.cloneDeep(endpoints_1.endpointsAccountV1.GetAccount);
-            const by = account_find_1.FindAccountBy.RIOT_ID;
-            endpoint.path = this.parsePath(endpoint, by);
+            const by = account_find_1.FindAccountBy.PUUID;
+            endpoint.path = this.parsePath(endpoint);
             const params = {
                 accountName: puuid,
-                by
+                by,
             };
             return this.request(region, endpoint, params);
         });

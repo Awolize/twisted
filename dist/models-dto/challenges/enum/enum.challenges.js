@@ -13,4 +13,4 @@ var Level;
     Level[Level["MASTER"] = 7] = "MASTER";
     Level[Level["GRANDMASTER"] = 8] = "GRANDMASTER";
     Level[Level["CHALLENGER"] = 9] = "CHALLENGER";
-})(Level = exports.Level || (exports.Level = {}));
+})(Level || (exports.Level = Level = {}));

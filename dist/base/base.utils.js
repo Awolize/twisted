@@ -16,7 +16,7 @@ exports.waiter = waiter;
 function getUrlFromOptions(options) {
     let uri = options.url;
     if (options.params) {
-        uri += '?';
+        uri += "?";
         uri += querystring_1.default.stringify(options.params);
     }
     return uri;

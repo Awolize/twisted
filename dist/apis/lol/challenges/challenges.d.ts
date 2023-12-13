@@ -1,6 +1,6 @@
-import { Regions, Levels } from '../../../constants';
-import { ChallengeConfigV1DTO, ChallengeLeaderboardEntryV1DTO, PercentilesV1DTO, ProfileV1DTO } from '../../../models-dto/challenges/playerData.dto';
-import { BaseApiLol } from '../base/base.api.lol';
+import { Levels, Regions } from "../../../constants";
+import { ChallengeConfigV1DTO, ChallengeLeaderboardEntryV1DTO, PercentilesV1DTO, ProfileV1DTO } from "../../../models-dto/challenges/playerData.dto";
+import { BaseApiLol } from "../base/base.api.lol";
 /**
  * Challenges methods
  */

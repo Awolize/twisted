@@ -22,7 +22,7 @@ class LeagueTFTApi extends base_api_tft_1.BaseApiTft {
     get(encryptedSummonerId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                encryptedSummonerId
+                encryptedSummonerId,
             };
             return this.request(region, endpoints_1.endpointsTFTV1.LeagueBySummoner, params);
         });

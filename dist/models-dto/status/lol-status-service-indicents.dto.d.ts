@@ -1,4 +1,4 @@
-import { LolStatusServiceIncidentsUpdate } from './lol-status-service-incidents-updates.dto';
+import { LolStatusServiceIncidentsUpdate } from "./lol-status-service-incidents-updates.dto";
 /**
  * Lol Status service incident
  */

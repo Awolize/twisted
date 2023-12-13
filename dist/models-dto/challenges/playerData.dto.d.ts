@@ -1,6 +1,6 @@
-import { ChallengeV1DTO } from './challenges.dto';
-import { Levels } from '../../constants';
-import { Level } from './enum/enum.challenges';
+import { Levels } from "../../constants";
+import { ChallengeV1DTO } from "./challenges.dto";
+import { Level } from "./enum/enum.challenges";
 export declare class Points {
     /**
      * Level of the category points.
@@ -50,8 +50,8 @@ export declare class PercentilesV1DTO {
      */
     readonly percentiles: Record<Level, number>;
 }
-declare type LocalizedNames = {
-    [key in 'ar_AE' | 'cs_CZ' | 'de_DE' | 'el_GR' | 'en_AU' | 'en_GB' | 'en_PH' | 'en_SG' | 'en_US' | 'es_AR' | 'es_ES' | 'es_MX' | 'fr_FR' | 'hu_HU' | 'it_IT' | 'ja_JP' | 'ko_KR' | 'pl_PL' | 'pt_BR' | 'ru_RU' | 'th_TH' | 'tr_TR' | 'vi_VN' | 'zh_CN' | 'zh_TW']: {
+type LocalizedNames = {
+    [key in "ar_AE" | "cs_CZ" | "de_DE" | "el_GR" | "en_AU" | "en_GB" | "en_PH" | "en_SG" | "en_US" | "es_AR" | "es_ES" | "es_MX" | "fr_FR" | "hu_HU" | "it_IT" | "ja_JP" | "ko_KR" | "pl_PL" | "pt_BR" | "ru_RU" | "th_TH" | "tr_TR" | "vi_VN" | "zh_CN" | "zh_TW"]: {
         description: string;
         name: string;
         shortDescription: string;
@@ -60,7 +60,7 @@ declare type LocalizedNames = {
 export declare class ChallengeConfigV1DTO {
     readonly id: number;
     readonly localizedNames: LocalizedNames;
-    readonly state: 'ENABLED' | 'DISABLED';
+    readonly state: "ENABLED" | "DISABLED";
     readonly leaderboard: boolean;
     readonly endTimestamp?: number;
     readonly thresholds: {

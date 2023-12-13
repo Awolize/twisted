@@ -1,7 +1,7 @@
-import { Regions } from '../../../constants';
-import { ThirdPartyCodeDTO } from '../../../models-dto/third-party-code/third-party-code.dto';
-import { ApiResponseDTO } from '../../../models-dto/api-response/api-response';
-import { BaseApiLol } from '../base/base.api.lol';
+import { Regions } from "../../../constants";
+import { ThirdPartyCodeDTO } from "../../../models-dto/third-party-code/third-party-code.dto";
+import { ApiResponseDTO } from "../../../models-dto/api-response/api-response";
+import { BaseApiLol } from "../base/base.api.lol";
 /**
  * Third party methods
  */

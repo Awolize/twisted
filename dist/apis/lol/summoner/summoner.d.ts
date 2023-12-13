@@ -1,6 +1,6 @@
-import { SummonerV4DTO } from '../../../models-dto/summoners/summoner.dto';
-import { Regions } from '../../../constants';
-import { BaseApiLol } from '../base/base.api.lol';
+import { SummonerV4DTO } from "../../../models-dto/summoners/summoner.dto";
+import { Regions } from "../../../constants";
+import { BaseApiLol } from "../base/base.api.lol";
 /**
  * Summoner methods
  */

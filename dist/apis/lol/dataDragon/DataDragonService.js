@@ -16,7 +16,7 @@ exports.DataDragonService = void 0;
 const axios_1 = __importDefault(require("axios"));
 const dataDragon_1 = require("../../../constants/dataDragon");
 const champions_1 = require("../../../constants/champions");
-const defaultLang = 'en_US';
+const defaultLang = "en_US";
 /**
  * Data Dragon is our way of centralizing League of Legends game data and assets, including champions, items, runes, summoner spells, and profile icons. All of which can be used by third-party developers. You can download a gzipped tar file (.tar.gz) for each patch which will contain all assets for that patch.
  * https://ddragon.Lol.com/cdn/dragontail-9.20.1.tgz
@@ -28,9 +28,9 @@ class DataDragonService {
         return __awaiter(this, void 0, void 0, function* () {
             const options = {
                 url: `${base}/${path}`,
-                method: 'GET'
+                method: "GET",
             };
-            return (yield axios_1.default(options)).data;
+            return (yield (0, axios_1.default)(options)).data;
         });
     }
     // Riot requests
@@ -43,13 +43,13 @@ class DataDragonService {
     }
     getVersions() {
         return __awaiter(this, void 0, void 0, function* () {
-            const path = 'api/versions.json';
+            const path = "api/versions.json";
             return this.request(path);
         });
     }
     getLanguages() {
         return __awaiter(this, void 0, void 0, function* () {
-            const path = 'cdn/languages.json';
+            const path = "cdn/languages.json";
             return this.request(path);
         });
     }
@@ -66,14 +66,14 @@ class DataDragonService {
     getChampion(champ) {
         return __awaiter(this, void 0, void 0, function* () {
             const version = (yield this.getVersions())[0];
-            let champName = '';
+            let champName = "";
             let path = `cdn/${version}/data/${defaultLang}/champion`;
             if (champ) {
-                champName = champions_1.getChampionNameCapital(champ);
+                champName = (0, champions_1.getChampionNameCapital)(champ);
                 path += `/${champName}.json`;
             }
             else {
-                path += '.json';
+                path += ".json";
             }
             const fullResponse = yield this.request(path);
             if (champ) {
@@ -86,31 +86,31 @@ class DataDragonService {
     // Static data
     getQueues() {
         return __awaiter(this, void 0, void 0, function* () {
-            const path = 'docs/lol/queues.json';
+            const path = "docs/lol/queues.json";
             return this.request(path, dataDragon_1.DataDragonEnum.STATIC);
         });
     }
     getSeasons() {
         return __awaiter(this, void 0, void 0, function* () {
-            const path = 'docs/lol/seasons.json';
+            const path = "docs/lol/seasons.json";
             return this.request(path, dataDragon_1.DataDragonEnum.STATIC);
         });
     }
     getMaps() {
         return __awaiter(this, void 0, void 0, function* () {
-            const path = 'docs/lol/maps.json';
+            const path = "docs/lol/maps.json";
             return this.request(path, dataDragon_1.DataDragonEnum.STATIC);
         });
     }
     getGameModes() {
         return __awaiter(this, void 0, void 0, function* () {
-            const path = 'docs/lol/gameModes.json';
+            const path = "docs/lol/gameModes.json";
             return this.request(path, dataDragon_1.DataDragonEnum.STATIC);
         });
     }
     getGameTypes() {
         return __awaiter(this, void 0, void 0, function* () {
-            const path = 'docs/lol/gameTypes.json';
+            const path = "docs/lol/gameTypes.json";
             return this.request(path, dataDragon_1.DataDragonEnum.STATIC);
         });
     }

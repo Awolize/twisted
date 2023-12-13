@@ -149,7 +149,7 @@ export declare namespace MatchV5DTOs {
         win: boolean;
     }
     interface ChallengesDto {
-        '12AssistStreakCount': number;
+        "12AssistStreakCount": number;
         abilityUses: number;
         acesBefore15Minutes: number;
         alliedJungleMonsterKills: number;
@@ -304,8 +304,8 @@ export declare namespace MatchV5DTOs {
         first: boolean;
         kills: number;
     }
-    type Description = 'primaryStyle' | 'subStyle';
-    type Position = '' | 'Invalid' | 'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM' | 'UTILITY';
-    type Role = 'SOLO' | 'NONE' | 'CARRY' | 'SUPPORT';
-    type Lane = 'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM';
+    type Description = "primaryStyle" | "subStyle";
+    type Position = "" | "Invalid" | "TOP" | "JUNGLE" | "MIDDLE" | "BOTTOM" | "UTILITY";
+    type Role = "SOLO" | "NONE" | "CARRY" | "SUPPORT";
+    type Lane = "TOP" | "JUNGLE" | "MIDDLE" | "BOTTOM";
 }

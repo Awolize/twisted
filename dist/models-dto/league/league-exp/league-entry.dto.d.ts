@@ -1,4 +1,4 @@
-import { MiniSeriesDTO } from '../summoner-league/miniseries.dto';
+import { MiniSeriesDTO } from "../summoner-league/miniseries.dto";
 export declare class LeagueEntryDTO {
     queueType: string;
     summonerName: string;

@@ -1,4 +1,4 @@
-import { PlayerPositionClashEnum, PlayerRoleClashEnum } from './enum/enum.clash';
+import { PlayerPositionClashEnum, PlayerRoleClashEnum } from "./enum/enum.clash";
 /**
  * Generic player dto
  */

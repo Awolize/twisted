@@ -1,21 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LolApi = void 0;
-const match_1 = require("./match/match");
-const league_1 = require("./league/league");
-const summoner_1 = require("./summoner/summoner");
+const account_1 = require("../riot/account/account");
+const base_api_lol_1 = require("./base/base.api.lol");
 const challenges_1 = require("./challenges/challenges");
-const thirdPartyCode_1 = require("./thirdPartyCode/thirdPartyCode");
 const champion_1 = require("./champion/champion");
+const clash_api_lol_1 = require("./clash/clash.api.lol");
+const DataDragonService_1 = require("./dataDragon/DataDragonService");
+const league_1 = require("./league/league");
+const match_1 = require("./match/match");
+const match_v5_1 = require("./match/match-v5");
+const seed_1 = require("./seed/seed");
 const spectator_1 = require("./spectator/spectator");
 const status_1 = require("./status/status");
-const DataDragonService_1 = require("./dataDragon/DataDragonService");
-const seed_1 = require("./seed/seed");
-const base_api_lol_1 = require("./base/base.api.lol");
-const clash_api_lol_1 = require("./clash/clash.api.lol");
-const match_v5_1 = require("./match/match-v5");
 const status_v4_1 = require("./status/status-v4");
-const account_1 = require("../riot/account/account");
+const summoner_1 = require("./summoner/summoner");
+const thirdPartyCode_1 = require("./thirdPartyCode/thirdPartyCode");
 /**
  * Classic league of legends api
  */

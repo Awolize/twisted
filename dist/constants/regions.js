@@ -15,7 +15,7 @@ var Regions;
     Regions["RUSSIA"] = "RU";
     Regions["JAPAN"] = "JP1";
     Regions["PBE"] = "PBE1";
-})(Regions = exports.Regions || (exports.Regions = {}));
+})(Regions || (exports.Regions = Regions = {}));
 /**
  * As per RIOT Api:
  * - The AMERICAS routing value serves NA, BR, LAN and LAS.
@@ -30,7 +30,7 @@ var RegionGroups;
     RegionGroups["AMERICAS"] = "AMERICAS";
     RegionGroups["EUROPE"] = "EUROPE";
     RegionGroups["SEA"] = "SEA";
-})(RegionGroups = exports.RegionGroups || (exports.RegionGroups = {}));
+})(RegionGroups || (exports.RegionGroups = RegionGroups = {}));
 function regionToRegionGroup(region) {
     switch (region) {
         // America

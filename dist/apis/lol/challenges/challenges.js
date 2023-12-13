@@ -39,7 +39,7 @@ class ChallengesApi extends base_api_lol_1.BaseApiLol {
     getChallengeConfig(challengeId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                challengeId
+                challengeId,
             };
             return this.request(region, endpoints_1.endpointsChallengesV1.GetChallengeConfig, params);
         });
@@ -52,7 +52,8 @@ class ChallengesApi extends base_api_lol_1.BaseApiLol {
     getLeaderboardsByLevel(challengeId, level, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                challengeId, level
+                challengeId,
+                level,
             };
             return this.request(region, endpoints_1.endpointsChallengesV1.GetLeaderboardsByLevel, params);
         });
@@ -64,7 +65,7 @@ class ChallengesApi extends base_api_lol_1.BaseApiLol {
     getChallengePercentiles(challengeId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                challengeId
+                challengeId,
             };
             return this.request(region, endpoints_1.endpointsChallengesV1.GetChallengePercentiles, params);
         });
@@ -76,7 +77,7 @@ class ChallengesApi extends base_api_lol_1.BaseApiLol {
     getPlayerData(puuid, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                puuid
+                puuid,
             };
             return this.request(region, endpoints_1.endpointsChallengesV1.GetPlayerData, params);
         });

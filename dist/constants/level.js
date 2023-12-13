@@ -20,4 +20,4 @@ var Levels;
     Levels["HIGHEST_NOT_LEADERBOARD_ONLY"] = "HIGHEST_NOT_LEADERBOARD_ONLY";
     Levels["HIGHEST"] = "HIGHEST";
     Levels["LOWEST"] = "LOWEST";
-})(Levels = exports.Levels || (exports.Levels = {}));
+})(Levels || (exports.Levels = Levels = {}));

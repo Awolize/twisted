@@ -1,4 +1,4 @@
-import { LolStatusIncidentsUpdateTranslations } from './lol-status-service-indicents-updates-translations';
+import { LolStatusIncidentsUpdateTranslations } from "./lol-status-service-indicents-updates-translations";
 /**
  * Lol status service incidents update
  */

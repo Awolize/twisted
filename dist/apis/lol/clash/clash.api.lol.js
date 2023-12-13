@@ -13,7 +13,9 @@ class ClashApi extends base_api_lol_1.BaseApiLol {
      * @param summonerId Encrypted summoner id
      */
     playersList(encryptedSummonerId, region) {
-        return this.request(region, endpoints_1.endpointsClashV1.GetPlayers, { encryptedSummonerId });
+        return this.request(region, endpoints_1.endpointsClashV1.GetPlayers, {
+            encryptedSummonerId,
+        });
     }
     /**
      * Get team by id
@@ -21,7 +23,9 @@ class ClashApi extends base_api_lol_1.BaseApiLol {
      * @param teamId Team id
      */
     getTeamById(teamId, region) {
-        return this.request(region, endpoints_1.endpointsClashV1.GetTeam, { teamId });
+        return this.request(region, endpoints_1.endpointsClashV1.GetTeam, {
+            teamId,
+        });
     }
     /**
      * Returns a list of active and upcoming tournaments.

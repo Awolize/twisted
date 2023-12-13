@@ -24,15 +24,15 @@ class SeedApi {
             const url = `${this.baseUrl}/${path}`;
             const options = {
                 url,
-                method: 'GET'
+                method: "GET",
             };
-            return (yield axios_1.default(options)).data;
+            return (yield (0, axios_1.default)(options)).data;
         });
     }
     matches(id) {
         return __awaiter(this, void 0, void 0, function* () {
             if (id < 1 || id > 10) {
-                throw new Error('Invalid index');
+                throw new Error("Invalid index");
             }
             const path = `matches${id}.json`;
             return this.request(path);

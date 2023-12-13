@@ -1,7 +1,7 @@
-import { Regions } from '../../../constants';
-import { ChampionMasteryDTO } from '../../../models-dto/champion/champion-mastery.dto';
-import { ChampionsScoreDTO } from '../../../models-dto/champion/champions-score.dto';
-import { BaseApiLol } from '../base/base.api.lol';
+import { Regions } from "../../../constants";
+import { ChampionMasteryDTO } from "../../../models-dto/champion/champion-mastery.dto";
+import { ChampionsScoreDTO } from "../../../models-dto/champion/champions-score.dto";
+import { BaseApiLol } from "../base/base.api.lol";
 /**
  * Third party methods
  */

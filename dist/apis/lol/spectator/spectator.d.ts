@@ -1,8 +1,8 @@
-import { Regions } from '../../../constants';
-import { FeaturedGamesDTO } from '../../../models-dto/spectator/featured-games.dto';
-import { CurrentGameInfoDTO } from '../../../models-dto/spectator/current-game-info.dto';
-import { SpectatorNotAvailableDTO } from '../../../models-dto/spectator/spectator-not-available.dto';
-import { BaseApiLol } from '../base/base.api.lol';
+import { Regions } from "../../../constants";
+import { FeaturedGamesDTO } from "../../../models-dto/spectator/featured-games.dto";
+import { CurrentGameInfoDTO } from "../../../models-dto/spectator/current-game-info.dto";
+import { SpectatorNotAvailableDTO } from "../../../models-dto/spectator/spectator-not-available.dto";
+import { BaseApiLol } from "../base/base.api.lol";
 export declare class SpectatorApi extends BaseApiLol {
     private errorHandler;
     /**

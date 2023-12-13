@@ -51,16 +51,16 @@ export declare namespace MatchV5TimelineDTOs {
         monsterType?: string;
         name?: string;
     }
-    type BuildingType = 'INHIBITOR_BUILDING' | 'TOWER_BUILDING';
-    type KillType = 'KILL_ACE' | 'KILL_FIRST_BLOOD' | 'KILL_MULTI';
-    type LaneType = 'BOT_LANE' | 'MID_LANE' | 'TOP_LANE';
-    type LevelUpType = 'EVOLVE' | 'NORMAL';
+    type BuildingType = "INHIBITOR_BUILDING" | "TOWER_BUILDING";
+    type KillType = "KILL_ACE" | "KILL_FIRST_BLOOD" | "KILL_MULTI";
+    type LaneType = "BOT_LANE" | "MID_LANE" | "TOP_LANE";
+    type LevelUpType = "EVOLVE" | "NORMAL";
     interface Position {
         x: number;
         y: number;
     }
-    type TowerType = 'BASE_TURRET' | 'INNER_TURRET' | 'NEXUS_TURRET' | 'OUTER_TURRET';
-    type EventType = 'BUILDING_KILL' | 'CHAMPION_KILL' | 'CHAMPION_SPECIAL_KILL' | 'DRAGON_SOUL_GIVEN' | 'ELITE_MONSTER_KILL' | 'GAME_END' | 'ITEM_DESTROYED' | 'ITEM_PURCHASED' | 'ITEM_SOLD' | 'ITEM_UNDO' | 'LEVEL_UP' | 'PAUSE_END' | 'SKILL_LEVEL_UP' | 'TURRET_PLATE_DESTROYED' | 'WARD_KILL' | 'WARD_PLACED';
+    type TowerType = "BASE_TURRET" | "INNER_TURRET" | "NEXUS_TURRET" | "OUTER_TURRET";
+    type EventType = "BUILDING_KILL" | "CHAMPION_KILL" | "CHAMPION_SPECIAL_KILL" | "DRAGON_SOUL_GIVEN" | "ELITE_MONSTER_KILL" | "GAME_END" | "ITEM_DESTROYED" | "ITEM_PURCHASED" | "ITEM_SOLD" | "ITEM_UNDO" | "LEVEL_UP" | "PAUSE_END" | "SKILL_LEVEL_UP" | "TURRET_PLATE_DESTROYED" | "WARD_KILL" | "WARD_PLACED";
     interface VictimDamage {
         basic: boolean;
         magicDamage: number;

@@ -1,4 +1,4 @@
-import { MatchListingMatches } from './match-listing-matches.dto';
+import { MatchListingMatches } from "./match-listing-matches.dto";
 export declare class MatchListingDto {
     /**
      * Matches listing

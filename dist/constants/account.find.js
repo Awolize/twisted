@@ -5,4 +5,4 @@ var FindAccountBy;
 (function (FindAccountBy) {
     FindAccountBy["PUUID"] = "by-puuid";
     FindAccountBy["RIOT_ID"] = "by-riot-id";
-})(FindAccountBy = exports.FindAccountBy || (exports.FindAccountBy = {}));
+})(FindAccountBy || (exports.FindAccountBy = FindAccountBy = {}));

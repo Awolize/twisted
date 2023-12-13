@@ -1,5 +1,5 @@
-import { PerksDTO } from './perks.dto';
-import { GameCustomizationObjectDTO } from './game-customization-object.dto';
+import { PerksDTO } from "./perks.dto";
+import { GameCustomizationObjectDTO } from "./game-customization-object.dto";
 export declare class CurrentGameParticipantDTO {
     /**
      * The ID of the profile icon used by this participant

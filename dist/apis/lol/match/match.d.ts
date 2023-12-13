@@ -1,10 +1,10 @@
-import { MatchListingDto } from '../../../models-dto/matches/match-listing/match-listing.dto';
-import { Regions } from '../../../constants';
-import { MatchDto } from '../../../models-dto/matches/match/match.dto';
-import { MatchTimelineDto } from '../../../models-dto/matches/match-timeline/match-timeline.dto';
-import { MatchQueryDTO } from '../../../models-dto/matches/query/match-query.dto';
-import { ApiResponseDTO } from '../../../models-dto';
-import { BaseApiLol } from '../base/base.api.lol';
+import { MatchListingDto } from "../../../models-dto/matches/match-listing/match-listing.dto";
+import { Regions } from "../../../constants";
+import { MatchDto } from "../../../models-dto/matches/match/match.dto";
+import { MatchTimelineDto } from "../../../models-dto/matches/match-timeline/match-timeline.dto";
+import { MatchQueryDTO } from "../../../models-dto/matches/query/match-query.dto";
+import { ApiResponseDTO } from "../../../models-dto";
+import { BaseApiLol } from "../base/base.api.lol";
 /**
  * Match methods
  */
