@@ -1,4 +1,5 @@
 export * from "./api-response";
+export * from "./challenges";
 export * from "./champion";
 export * from "./data-dragon";
 export * from "./league";
