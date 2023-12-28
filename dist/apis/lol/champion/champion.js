@@ -27,40 +27,40 @@ class ChampionApi extends base_api_lol_1.BaseApiLol {
     }
     /**
      * Champion mastery by summoner
-     * @param encryptedSummonerId
+     * @param encryptedPUUID
      * @param region
      */
-    masteryBySummoner(encryptedSummonerId, region) {
+    masteryBySummoner(encryptedPUUID, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                encryptedSummonerId,
+                encryptedPUUID,
             };
-            return this.request(region, endpoints_1.endpointsV4.ChampionMasteryBySummoner, params);
+            return this.request(region, endpoints_1.endpointsV4.ChampionMasteryByPUUID, params);
         });
     }
     /**
      * Champion mastery by summoner
-     * @param encryptedSummonerId
+     * @param encryptedPUUID
      * @param region
      */
-    masteryBySummonerChampion(encryptedSummonerId, championId, region) {
+    masteryBySummonerChampion(encryptedPUUID, championId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                encryptedSummonerId,
+                encryptedPUUID,
                 championId,
             };
-            return this.request(region, endpoints_1.endpointsV4.ChampionMasteryBySummonerChampion, params);
+            return this.request(region, endpoints_1.endpointsV4.ChampionMasteryByPUUIDChampion, params);
         });
     }
     /**
      * Champions mastery score
-     * @param encryptedSummonerId
+     * @param encryptedPUUID
      * @param region
      */
-    championsScore(encryptedSummonerId, region) {
+    championsScore(encryptedPUUID, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
-                encryptedSummonerId,
+                encryptedPUUID,
             };
             let { response: score } = yield this.request(region, endpoints_1.endpointsV4.ChampionsScore, params);
             if (typeof score !== "number") {

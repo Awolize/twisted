@@ -84,18 +84,18 @@ exports.endpointsV4 = {
         prefix: "platform",
         version: 4,
     },
-    ChampionMasteryBySummoner: {
-        path: "champion-masteries/by-summoner/$(encryptedSummonerId)",
+    ChampionMasteryByPUUID: {
+        path: "champion-masteries/by-puuid/$(encryptedPUUID)",
         prefix: "champion-mastery",
         version: 4,
     },
-    ChampionMasteryBySummonerChampion: {
-        path: "champion-masteries/by-summoner/$(encryptedSummonerId)/by-champion/$(championId)",
+    ChampionMasteryByPUUIDChampion: {
+        path: "champion-masteries/by-puuid/$(encryptedPUUID)/by-champion/$(championId)",
         prefix: "champion-mastery",
         version: 4,
     },
     ChampionsScore: {
-        path: "scores/by-summoner/$(encryptedSummonerId)",
+        path: "scores/by-puuid/$(encryptedPUUID)",
         prefix: "champion-mastery",
         version: 4,
     },
