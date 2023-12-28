@@ -7,6 +7,7 @@ import { BaseApiLol } from "../base/base.api.lol";
 /**
  * Third party methods
  */
+
 export class ChampionApi extends BaseApiLol {
 	/**
 	 * Get champion rotation
