@@ -17,50 +17,50 @@ export class ChampionApi extends BaseApiLol {
 	}
 	/**
 	 * Champion mastery by summoner
-	 * @param encryptedSummonerId
+	 * @param encryptedPUUID
 	 * @param region
 	 */
-	public async masteryBySummoner(encryptedSummonerId: string, region: Regions) {
+	public async masteryBySummoner(encryptedPUUID: string, region: Regions) {
 		const params = {
-			encryptedSummonerId,
+			encryptedPUUID,
 		};
 		return this.request<ChampionMasteryDTO[]>(
 			region,
-			endpointsV4.ChampionMasteryBySummoner,
+			endpointsV4.ChampionMasteryByPUUID,
 			params,
 		);
 	}
 	/**
 	 * Champion mastery by summoner
-	 * @param encryptedSummonerId
+	 * @param encryptedPUUID
 	 * @param region
 	 */
 	public async masteryBySummonerChampion(
-		encryptedSummonerId: string,
+		encryptedPUUID: string,
 		championId: number,
 		region: Regions,
 	) {
 		const params = {
-			encryptedSummonerId,
+			encryptedPUUID,
 			championId,
 		};
 		return this.request<ChampionMasteryDTO>(
 			region,
-			endpointsV4.ChampionMasteryBySummonerChampion,
+			endpointsV4.ChampionMasteryByPUUIDChampion,
 			params,
 		);
 	}
 	/**
 	 * Champions mastery score
-	 * @param encryptedSummonerId
+	 * @param encryptedPUUID
 	 * @param region
 	 */
 	public async championsScore(
-		encryptedSummonerId: string,
+		encryptedPUUID: string,
 		region: Regions,
 	): Promise<ChampionsScoreDTO> {
 		const params = {
-			encryptedSummonerId,
+			encryptedPUUID,
 		};
 		let { response: score } = await this.request<number | undefined>(
 			region,
