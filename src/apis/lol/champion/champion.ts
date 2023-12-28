@@ -20,7 +20,7 @@ export class ChampionApi extends BaseApiLol {
 	 * @param encryptedPUUID
 	 * @param region
 	 */
-	public async masteryBySummoner(encryptedPUUID: string, region: Regions) {
+	public async masteryByPUUID(encryptedPUUID: string, region: Regions) {
 		const params = {
 			encryptedPUUID,
 		};
@@ -35,7 +35,7 @@ export class ChampionApi extends BaseApiLol {
 	 * @param encryptedPUUID
 	 * @param region
 	 */
-	public async masteryBySummonerChampion(
+	public async masteryByPUUIDChampion(
 		encryptedPUUID: string,
 		championId: number,
 		region: Regions,
