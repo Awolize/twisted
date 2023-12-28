@@ -16,13 +16,13 @@ export declare class ChampionApi extends BaseApiLol {
      * @param encryptedPUUID
      * @param region
      */
-    masteryBySummoner(encryptedPUUID: string, region: Regions): Promise<import("../../../models-dto").ApiResponseDTO<ChampionMasteryDTO[]>>;
+    masteryByPUUID(encryptedPUUID: string, region: Regions): Promise<import("../../../models-dto").ApiResponseDTO<ChampionMasteryDTO[]>>;
     /**
      * Champion mastery by summoner
      * @param encryptedPUUID
      * @param region
      */
-    masteryBySummonerChampion(encryptedPUUID: string, championId: number, region: Regions): Promise<import("../../../models-dto").ApiResponseDTO<ChampionMasteryDTO>>;
+    masteryByPUUIDChampion(encryptedPUUID: string, championId: number, region: Regions): Promise<import("../../../models-dto").ApiResponseDTO<ChampionMasteryDTO>>;
     /**
      * Champions mastery score
      * @param encryptedPUUID

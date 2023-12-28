@@ -30,7 +30,7 @@ class ChampionApi extends base_api_lol_1.BaseApiLol {
      * @param encryptedPUUID
      * @param region
      */
-    masteryBySummoner(encryptedPUUID, region) {
+    masteryByPUUID(encryptedPUUID, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
                 encryptedPUUID,
@@ -43,7 +43,7 @@ class ChampionApi extends base_api_lol_1.BaseApiLol {
      * @param encryptedPUUID
      * @param region
      */
-    masteryBySummonerChampion(encryptedPUUID, championId, region) {
+    masteryByPUUIDChampion(encryptedPUUID, championId, region) {
         return __awaiter(this, void 0, void 0, function* () {
             const params = {
                 encryptedPUUID,
