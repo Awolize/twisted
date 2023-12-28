@@ -25,6 +25,8 @@ export interface Preferences {
 	bannerAccent: string;
 	title: string;
 	challengeIds: number[];
+	crestBorder: string;
+	prestigeCrestBorderLevel: number;
 }
 
 export class ProfileV1DTO {
