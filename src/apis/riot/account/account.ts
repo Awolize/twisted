@@ -28,7 +28,7 @@ export class AccountApi extends BaseApiRiot {
 		const by = FindAccountBy.RIOT_ID;
 		endpoint.path = this.parsePath(endpoint);
 		const params = {
-			accountName: `${encodeURI(String(gameName))}/${tagLine}`,
+			accountName: `${gameName}/${tagLine}`,
 			by,
 		};
 
